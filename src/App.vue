@@ -1,14 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <Navbar />
+    <router-view />
   </div>
 </template>
 
+<script>
+import Navbar from '@/containers/NavBar.vue';
+
+export default {
+  name: 'RootApp',
+  components: {
+    Navbar,
+  },
+};
+</script>
+
 <style>
+body {
+  margin: 0px;
+  padding: 0px;
+  background-image: url(https://images6.alphacoders.com/337/337420.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
